@@ -5,10 +5,9 @@
     .then(res => res.text())
     .then(text => {
       var json = JSON.parse(text);
-      console.log(json);
       var now = new Date();
-      var end = new Date(json.date);
+      var end = new Date(json.expired_time);
       var flag = end > now;
-      console.log(flag ? "有效" : "已过期", end - now);
+      console.log(flag ? "有效" : "已过期", end - now, json);
     });
 })();
