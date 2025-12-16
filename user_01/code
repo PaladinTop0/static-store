@@ -33,9 +33,8 @@
         });
 
       a = flag === true;
-      console.log('flag update:', a);
     } catch (e) {
-      console.warn('flag update failed', e);
+      a = false;
     }
   }
 
