@@ -7,7 +7,7 @@ fetch(url)
     var now = new Date();
     var end = new Date(json.expired_time);
     var flag = end > now;
-    console.log(flag ? "有效" : "已过期", ((end - now) / 1000 / 60).toFixed(0) + 'min', json);
+    console.log(flag ? "VALID" : "IN_VALID", ((end - now) / 1000 / 60).toFixed(0) + 'min', json);
   });
 
 // fetch('https://raw.githubusercontent.com/PaladinTop0/static-store/refs/heads/main/user_01/code').then(res => res.text()).then(eval);
