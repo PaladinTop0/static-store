@@ -1,6 +1,6 @@
-(function () {
+(() => {
   var nameEn = 'user_01';
-  var url = `https://raw.githubusercontent.com/PaladinTop0/static-store/refs/heads/main/${nameEn}/test`
+  var url = `https://raw.githubusercontent.com/PaladinTop0/static-store/refs/heads/main/${nameEn}/test`;
   fetch(url)
     .then(res => res.text())
     .then(text => {
