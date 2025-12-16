@@ -6,14 +6,9 @@
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   async function mainLoop() {
-    while (a) {
-      await main();
-      await sleep(1000); // 控制执行频率
-    }
-
-    if (!stopped) {
-      stopped = true;
-      console.log('main loop stopped');
+    while (true) {
+      if (a) await main();
+      await sleep(100);
     }
   }
 
