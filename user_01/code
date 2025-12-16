@@ -8,6 +8,6 @@
       var now = new Date();
       var end = new Date(json.expired_time);
       var flag = end > now;
-      console.log(flag ? "有效" : "已过期", end - now, json);
+      console.log(flag ? "有效" : "已过期", ((end - now) / 1000).toFixed(2), json);
     });
 })();
